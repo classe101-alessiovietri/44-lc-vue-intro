@@ -3,12 +3,51 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Template HTML CSS JS</title>
+        <title>Vue Intro</title>
 
         <link rel="stylesheet" href="css/style.css">
+        
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     </head>
     <body>
-        
-        <script src="js/scripts.js" type="text/javascript"></script>
+
+        <div id="tazzina-di-caffe">
+                
+            <h1 :style="`color: rgb(33, ${greenValue}, ${blueValue})`">
+                {{ zucchero }} {{ zuccheroDue }}
+            </h1>
+
+            <h2 class="bg-primary text-secondary">
+                {{ classiParagrafo }}
+            </h2>
+
+            <p class="borderino" v-bind:class="classiParagrafo">
+                Il mio nome completo è: {{ firstName }} {{ lastName }}
+            </p>
+
+            <div v-bind:class="sayHi()">
+                {{ sayHi() }}
+            </div>
+
+            {{ age }}
+            {{ knownLanguages }}
+            {{ wearsGlasses }}
+
+            <input id="my-input" type="text" v-model="zucchero">
+            <input id="my-input-2" type="text" @keyup="stampaClassi()" v-model="classiParagrafo">
+
+            <button v-on:click="alertAllUtente()">
+                Saluta l'utente
+            </button>
+
+        </div>
+
+        <script src="js/scripts.js"></script>
     </body>
 </html>
+
+
+<!-- <script>
+    const message = 'Hello Vue!';
+    document.getElementById('app').innerHTML = message;
+</script> -->

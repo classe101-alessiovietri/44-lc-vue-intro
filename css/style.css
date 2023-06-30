@@ -3,3 +3,23 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.text-red {
+    color: red;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.border {
+    border: 3px solid lightcoral;
+}
+
+.borderino {
+    border: 10px solid blue;
+}
+
+.bg-aquamarine {
+    background-color: aquamarine;
+}
